@@ -7,9 +7,13 @@ router.get('/', async (req, res) => {
   // find all categories
   // be sure to include its associated Products
   try {
-    const categoryData = await Category.findAll({
-      include: [{ model: Product }],
-    });
+    const categoryData = await Category.findAll(
+      {
+        include: {
+          model: Product
+        }
+      }
+    );
     res.status(200).json(categoryData);
   } catch (err) {
     res.status(500).json(err);
@@ -39,10 +43,10 @@ router.post('/',  async (req, res) => {
   // create a new category
   
     try {
-      const locationData = await Category.create({
+      const categoryData = await Category.create({
         category_name: req.body.category_name,
       });
-      res.status(200).json(locationData);
+      res.status(200).json(categoryData);
     } catch (err) {
       res.status(400).json(err);
     }
