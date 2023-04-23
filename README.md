@@ -24,6 +24,9 @@ https://drive.google.com/file/d/15Vwf2NGPaJgPWKrCfEFvuBRJcBT3axcq/view
 ## github 
 https://github.com/melhelow/E-Commerce
 
+## Used technologies
+Postman
+
 
 
 
